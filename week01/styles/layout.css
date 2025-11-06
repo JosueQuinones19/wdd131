@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body con Grid principal */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* Header | Main Section | Footer */
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: #222;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background-color: #0a74da;
+    color: white;
+    padding: 20px;
+}
+
+/* Navegación con Flexbox */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Nuevo contenedor para Main y Aside */
+main {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    /* Main más grande (izquierda), Aside más pequeño (derecha) */
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Aside - lado izquierdo */
+section {
+    background-color: #fdfdfd;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Aside content - lado derecho (más pequeño) */
+aside {
+    background-color: #eaeaea;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: #0a74da;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+    
+}
