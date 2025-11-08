@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD 131 – Dynamic Web Fundamentals – Josue Quiñones</title>
+
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals – Josue Quiñones. Home page with course resources, personal introduction, and favorite place using HTML, CSS, and JavaScript.">
+    <meta name="author" content="Josue Quiñones">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- JavaScript para fechas -->
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- Título del curso en un span con id course-title -->
+        <h1>
+            <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        </h1>
+
+        <!-- Navegación con 4 enlaces -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/josue-quinones-94b29b316/" target="_blank"
+                        rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">
+                        Canvas
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"
+                        target="_blank" rel="noopener noreferrer">
+                        Favorite Scripture
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        Final Project
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Josue Quiñones</h1>
+    
+        <!-- Card 1: About Me -->
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="content">
+                <div class="text">
+                    <p>
+                        Hello! I'm Josue, a software development student passionate about learning,
+                        building useful applications, and growing as a web developer.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="images/mia.jpg" alt="Photo of Josue Quiñones">
+                </div>
+            </div>
+        </section>
+    
+        <!-- Card 2: Favorite Place -->
+        <section class="card">
+            <h2>Favorite Place</h2>
+            <div class="content">
+                <div class="text">
+                    <p>
+                        One of my favorite places is Lehi, Utah. I enjoy the calm atmosphere and
+                        beautiful sunsets that help me stay focused and inspired while studying.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="images/lehi.jpg" alt="Lehi, Utah landscape">
+                </div>
+            </div>
+        </section>
+    
+        <!-- Optional Aside for future content -->
+        <aside>
+            <!-- Reserved for Web Dev Resources or similar -->
+        </aside>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> | Josue Quiñones | Utah, USA.
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
