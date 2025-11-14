@@ -1,0 +1,20 @@
+@media screen and (min-width: 700px) {
+
+    /* Ocultar el botón hamburguesa en pantallas grandes */
+    #menu-button {
+        display: none;
+    }
+
+    /* Menú horizontal */
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    /* Grid de 3 columnas en desktop */
+    .album {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+}
