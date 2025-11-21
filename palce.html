@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tokyo, Japan – City Facts & Weather</title>
+    <meta name="description"
+        content="Tokyo, Japan city page with key data and current-style weather information including wind chill.">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Tokyo, Japan</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <!-- Large / desktop image -->
+                <source srcset="images/tokyo-large.webp" media="(min-width: 900px)">
+                <!-- Default / mobile image -->
+                <img src="images/tokyo-small.webp" alt="Night skyline of Tokyo with Tokyo Tower and city lights"
+                    width="800" height="450" loading="lazy">
+            </picture>
+        </div>
+
+        <section class="info-card data-card">
+            <h2>Data</h2>
+            <dl>
+                <div>
+                    <dt>Country:</dt>
+                    <dd>Japan</dd>
+                </div>
+                <div>
+                    <dt>Area:</dt>
+                    <dd>2,194 sq km</dd>
+                </div>
+                <div>
+                    <dt>Population:</dt>
+                    <dd>~14,000,000</dd>
+                </div>
+                <div>
+                    <dt>Capital:</dt>
+                    <dd>Tokyo</dd>
+                </div>
+                <div>
+                    <dt>Languages:</dt>
+                    <dd>Japanese</dd>
+                </div>
+                <div>
+                    <dt>Currency:</dt>
+                    <dd>Japanese Yen (¥)</dd>
+                </div>
+                <div>
+                    <dt>Time Zone:</dt>
+                    <dd>UTC+9 (JST)</dd>
+                </div>
+                <div>
+                    <dt>Calling Code:</dt>
+                    <dd>+81</dd>
+                </div>
+                <div>
+                    <dt>Internet TLD:</dt>
+                    <dd>.jp</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="info-card weather-card">
+            <h2 class="weather-heading">
+                Weather
+                <!-- SVG icon: mobile view only (hidden in wide view via CSS) -->
+                <span class="weather-icon-mobile">
+                    <img src="images/weather-partly-cloudy.svg" alt="Partly cloudy weather icon">
+                </span>
+            </h2>
+            <ul class="weather-list">
+                <li>
+                    <span class="label">Temperature:</span>
+                    <span> <span id="temperature">8</span> °C</span>
+                </li>
+                <li>
+                    <span class="label">Conditions:</span>
+                    <span>Partly Cloudy</span>
+                </li>
+                <li>
+                    <span class="label">Wind:</span>
+                    <span><span id="wind-speed">18</span> km/h</span>
+                </li>
+                <li>
+                    <span class="label">Wind Chill:</span>
+                    <span id="windchill">N/A</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🌸 Josue Quiñones 🌸 Tokyo, Japan</p>
+        <p>Last Modification: <span id="lastmodified"></span></p>
+    </footer>
+</body>
+
+</html>
