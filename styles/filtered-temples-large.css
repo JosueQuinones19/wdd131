@@ -1,0 +1,31 @@
+@media screen and (min-width: 700px) {
+
+    /* Hide hamburger on large screens */
+    #menu-button {
+        display: none;
+    }
+
+    /* Horizontal nav */
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+    main {
+        padding: 2rem 2rem 3rem;
+    }
+
+    /* 3-column grid on desktop */
+    .album {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.25rem;
+    }
+}

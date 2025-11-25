@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    background-color: #f4f4f7;
+    color: #222;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background-color: #2f2a3f;
+    color: #ffffff;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Mobile menu button */
+#menu-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Navigation */
+nav {
+    display: none;
+    /* mobile default */
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #2f2a3f;
+    padding: 0.75rem 1rem;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+/* Main */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2rem;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Album grid */
+.album {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+}
+
+/* Temple card */
+.temple-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 1.25rem 1.25rem 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.temple-card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    color: #3c275c;
+    /* morado oscuro accesible */
+}
+
+/* Text labels (LOCATION, DEDICATED, SIZE) */
+.temple-meta {
+    margin: 0.15rem 0;
+    font-size: 0.95rem;
+}
+
+.temple-label {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #5a3a86;
+    font-size: 0.8rem;
+}
+
+/* Image */
+.temple-card img {
+    margin-top: 0.75rem;
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background-color: #e3e3eb;
+    color: #222;
+}

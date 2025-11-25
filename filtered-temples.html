@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Filtered Temple Album – Josue Quiñones</title>
+
+    <meta name="description" content="A responsive, filterable temple album with dynamically generated temple cards.">
+    <meta name="author" content="Josue Quiñones">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Mobile First -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h2>Temple Album</h2>
+
+        <button id="menu-button" aria-label="Menu" aria-expanded="false">☰</button>
+
+        <nav id="menu">
+            <a href="#" data-filter="home">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temple Gallery</h1>
+
+        <!-- Aquí se insertan las cards dinámicamente -->
+        <section class="album" id="temple-cards"></section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Josue Quiñones | WDD 131</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
