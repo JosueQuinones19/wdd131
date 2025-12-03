@@ -1,0 +1,205 @@
+/* General layout */
+:root {
+    --color-primary: #1E88E5;
+    --color-secondary: #FFB300;
+    --color-background: #F5F5F5;
+    --color-text: #212121;
+    --radius-card: 12px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 1.5rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.logo-mark {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.logo-text h1 {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+.tagline {
+    margin: 0.15rem 0 0;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+/* Main content */
+main {
+    max-width: 960px;
+    margin: 1.5rem auto 3rem;
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+h2 {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Site name */
+#site-name h3 {
+    font-size: 1.25rem;
+}
+
+.optional-domain {
+    font-size: 0.95rem;
+    color: #555555;
+}
+
+/* Lists */
+ul {
+    padding-left: 1.25rem;
+}
+
+/* Color schema */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-card {
+    border-radius: var(--radius-card);
+    padding: 1rem;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+}
+
+.color-swatch {
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+/* Applying the actual colors */
+.color-swatch.primary {
+    background-color: var(--color-primary);
+}
+
+.color-swatch.secondary {
+    background-color: var(--color-secondary);
+}
+
+.color-swatch.background {
+    background-color: var(--color-background);
+}
+
+.color-swatch.text {
+    background-color: var(--color-text);
+}
+
+/* Typography samples */
+.type-samples {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sample-heading {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.sample-body {
+    font-family: "Roboto", system-ui, sans-serif;
+}
+
+/* Wireframes */
+.wireframe-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.wireframe-grid img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-top: 0.5rem;
+}
+
+.wireframe-note {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777777;
+    padding: 1.5rem 1rem 2rem;
+}
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
+    .wireframe-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
