@@ -3,28 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Josue Quiñones">
     <title>Review Submitted</title>
+    <script src="scripts/review.js" defer></script>
 </head>
 
 <body>
     <main>
         <h1>Thank You for Your Review!</h1>
-
         <p>Your review has been submitted successfully.</p>
-
         <p>You have submitted <strong id="count"></strong> reviews so far.</p>
-
         <a href="form.html">Submit Another Review</a>
     </main>
 
-    <script>
-        let count = Number(localStorage.getItem("reviewCount")) || 0;
-        count++;
-        localStorage.setItem("reviewCount", count);
-
-        document.getElementById("count").textContent = count;
-    </script>
+    <footer>
+        <p>&copy; <span id="year"></span> Josue Quiñones</p>
+    </footer>
 </body>
 
 </html>
