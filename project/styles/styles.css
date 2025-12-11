@@ -1,0 +1,475 @@
+/* ===========================
+   Base Reset & Variables
+   =========================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #1e88e5;
+    --color-primary-dark: #0d47a1;
+    --color-secondary: #ffb300;
+    --color-bg: #f5f5f5;
+    --color-surface: #ffffff;
+    --color-text: #212121;
+    --color-muted: #616161;
+    --color-border: #e0e0e0;
+    --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.06);
+    --radius-lg: 1rem;
+    --radius-md: 0.75rem;
+    --radius-pill: 999px;
+    --spacing-section: 4rem;
+    --max-width: 1100px;
+}
+
+/* ===========================
+   Global Styles
+   =========================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+}
+
+/* Remove default margin in headings & paragraphs */
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Links */
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--color-primary-dark);
+}
+
+/* Utility container */
+
+main,
+.section,
+.hero {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+/* ===========================
+   Header & Navigation
+   =========================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(245, 245, 245, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(224, 224, 224, 0.9);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+.logo-text h1 {
+    font-size: 1.1rem;
+    margin-bottom: 0.1rem;
+}
+
+.logo-text .tagline {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+}
+
+.logo-link {
+    color: inherit;
+}
+
+.logo-link:hover {
+    color: inherit;
+}
+
+/* Navigation */
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    padding: 0.35rem 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.3rem 0;
+    position: relative;
+}
+
+.nav-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    transition: width 0.2s ease;
+}
+
+.nav-list a:hover::after,
+.nav-list a:focus-visible::after,
+.nav-list a[aria-current="page"]::after {
+    width: 100%;
+}
+
+/* ===========================
+   Hero Section
+   =========================== */
+
+.hero {
+    padding-block: 3.5rem 3rem;
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-kicker {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+}
+
+.hero p {
+    color: var(--color-muted);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.hero-visual {
+    max-width: 380px;
+    margin-inline: auto;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.3rem;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease,
+        color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: #ffffff;
+    box-shadow: var(--shadow-soft);
+}
+
+.btn.primary:hover,
+.btn.primary:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+}
+
+.btn.secondary {
+    background-color: #ffffff;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn.secondary:hover,
+.btn.secondary:focus-visible {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+/* ===========================
+   Sections & Cards
+   =========================== */
+
+.section {
+    padding-block: var(--spacing-section);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 650px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--color-muted);
+}
+
+/* Grid for cards */
+
+.cards-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(224, 224, 224, 0.7);
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--color-muted);
+}
+
+/* Project card small accent */
+
+.project-card .tech-stack {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+}
+
+/* Section call-to-action */
+
+.section-cta {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+.site-footer {
+    border-top: 1px solid rgba(224, 224, 224, 0.9);
+    padding: 1.5rem 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+}
+
+.site-footer a {
+    font-weight: 500;
+}
+
+/* ===========================
+   Responsive Layout
+   =========================== */
+
+/* Tablets and up */
+@media (min-width: 600px) {
+    .hero {
+        grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+    }
+
+    .hero h2 {
+        font-size: 2.1rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Large screens */
+@media (min-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Mobile navigation behavior */
+@media (max-width: 720px) {
+    .site-header {
+        align-items: flex-start;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        margin-top: 0.4rem;
+        background-color: #ffffff;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-soft);
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 160px;
+        display: none;
+        /* hidden by default, will show with JS */
+    }
+
+    .site-nav.nav-open .nav-list {
+        display: flex;
+    }
+}
+/* ===========================
+   Forms & Controls
+   =========================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+label {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    font: inherit;
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border);
+    background-color: #ffffff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.15);
+}
+
+textarea {
+    resize: vertical;
+}
+
+#contactStatus {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.small {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+}
+
+/* Filter controls on projects page */
+.filter-controls {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.filter-controls label {
+    font-size: 0.9rem;
+}

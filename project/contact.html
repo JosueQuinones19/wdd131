@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact – DevPath by Josue</title>
+
+    <meta name="description"
+        content="Contact Josue Quiñones for collaboration, junior developer opportunities, or questions about his projects.">
+    <meta name="author" content="Josue Quiñones">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Main JS -->
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo-area">
+            <div class="logo-mark">JQ</div>
+            <div class="logo-text">
+                <a href="index.html" class="logo-link">
+                    <h1>DevPath by Josue</h1>
+                    <p class="tagline">Junior Developer Portfolio</p>
+                </a>
+            </div>
+        </div>
+
+        <nav class="site-nav">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <header class="section-header">
+                <h2>Contact</h2>
+                <p>
+                    If you would like to collaborate, have a question about my projects, or
+                    just want to say hello, feel free to send me a message.
+                </p>
+            </header>
+
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>Contact Information</h3>
+                    <p>
+                        I am currently studying software development and building projects in my free time.
+                        The best way to reach me is through this contact form.
+                    </p>
+                    <p>
+                        You can also connect with me on your preferred professional platform such as LinkedIn or GitHub. 
+                        I use those profiles to share my progress and projects as a developer.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Send a Message</h3>
+
+                    <form id="contactForm" novalidate>
+                        <label for="name">Name *</label>
+                        <input id="name" name="name" type="text" required>
+
+                        <label for="email">Email *</label>
+                        <input id="email" name="email" type="email" required>
+
+                        <label for="reason">Reason for contact *</label>
+                        <select id="reason" name="reason" required>
+                            <option value="" disabled selected>Select an option...</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="job-opportunity">Job Opportunity</option>
+                            <option value="question">Question about a project</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit" class="btn primary">Send Message</button>
+
+                        <p id="contactStatus" aria-live="polite"></p>
+
+                        <p class="small">
+                            Messages sent: <span id="contactCount">0</span>
+                        </p>
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> DevPath by Josue.</p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+
+</html>

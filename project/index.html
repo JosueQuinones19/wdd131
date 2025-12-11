@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevPath by Josue – Developer Portfolio</title>
+
+    <meta name="description"
+        content="Developer portfolio for Josue Quiñones showcasing web development projects, skills, and ways to get in touch.">
+    <meta name="author" content="Josue Quiñones">
+
+    <!-- Google Fonts (same as siteplan) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Main site CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Main JavaScript -->
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo-area">
+            <div class="logo-mark">JQ</div>
+            <div class="logo-text">
+                <a href="index.html" class="logo-link">
+                    <h1>DevPath by Josue</h1>
+                    <p class="tagline">Junior Developer Portfolio</p>
+                </a>
+            </div>
+        </div>
+
+        <nav class="site-nav">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="nav-list">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="hero-kicker">Hello, I’m Josue 👋</p>
+                <h2>Building my path as a web and software developer.</h2>
+                <p>
+                    I am a software development student focused on modern web technologies, clean design,
+                    and writing code that is maintainable and easy to understand.
+                    This site is where I share my projects and my progress as a developer.
+                </p>
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn primary">View Projects</a>
+                    <a href="contact.html" class="btn secondary">Get in Touch</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <img src="images/hero.webp"
+                    alt="Illustration of a developer working on a laptop with code on the screen" loading="eager">
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <header class="section-header">
+                <h2>Skills & Technologies</h2>
+                <p>A snapshot of the tools and technologies I am currently working with.</p>
+            </header>
+
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>Frontend</h3>
+                    <p>
+                        HTML, modern CSS (Flexbox, Grid), and basic JavaScript to create responsive,
+                        accessible, and user-friendly web interfaces.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Programming</h3>
+                    <p>
+                        Python and JavaScript with a focus on writing clean, readable code and understanding
+                        core programming concepts like functions, objects, and data structures.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Learning Path</h3>
+                    <p>
+                        Currently studying web development, software development fundamentals, and
+                        strengthening my problem-solving skills to prepare for real-world projects.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="section" id="featured-projects">
+            <header class="section-header">
+                <h2>Featured Projects</h2>
+                <p>
+                    A few examples of the types of projects I am building as I learn and grow as a developer.
+                </p>
+            </header>
+
+            <div class="cards-grid">
+                <article class="card project-card">
+                    <h3>Responsive Layout Project</h3>
+                    <p>
+                        A fully responsive website that adapts to mobile, tablet, and desktop views using
+                        CSS Flexbox and Grid while following design principles.
+                    </p>
+                    <p class="tech-stack"><strong>Tech stack:</strong> HTML, CSS</p>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Interactive Form Experience</h3>
+                    <p>
+                        A form with validation, semantic HTML, and JavaScript enhancements to improve
+                        usability and feedback for users.
+                    </p>
+                    <p class="tech-stack"><strong>Tech stack:</strong> HTML, CSS, JavaScript</p>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Data-Driven View (Coming Soon)</h3>
+                    <p>
+                        A page that loads project data from a JavaScript array of objects, and lets
+                        the user filter or sort the information dynamically.
+                    </p>
+                    <p class="tech-stack"><strong>Tech stack:</strong> HTML, CSS, JavaScript</p>
+                </article>
+            </div>
+
+            <div class="section-cta">
+                <a href="projects.html" class="btn primary">See All Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> DevPath by Josue.</p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+
+</html>

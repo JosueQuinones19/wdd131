@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects – DevPath by Josue</title>
+
+    <meta name="description"
+        content="Browse a selection of web development and programming projects by Josue Quiñones, including responsive layouts and JavaScript exercises.">
+    <meta name="author" content="Josue Quiñones">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Main JS -->
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo-area">
+            <div class="logo-mark">JQ</div>
+            <div class="logo-text">
+                <a href="index.html" class="logo-link">
+                    <h1>DevPath by Josue</h1>
+                    <p class="tagline">Junior Developer Portfolio</p>
+                </a>
+            </div>
+        </div>
+
+        <nav class="site-nav">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" aria-current="page">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <header class="section-header">
+                <h2>Projects</h2>
+                <p>
+                    These projects represent my current skills in responsive web design and JavaScript.
+                    The list below will be rendered dynamically with JavaScript.
+                </p>
+            </header>
+
+            <!-- Filters / Controls -->
+            <div class="cards-grid" style="margin-bottom: 1.5rem;">
+                <article class="card">
+                    <h3>Filter Projects</h3>
+                    <p>Use the control below to explore projects by type.</p>
+
+                    <div class="filter-controls">
+                        <label for="projectFilter">Filter by type:</label>
+                        <select id="projectFilter">
+                            <option value="all">All</option>
+                            <option value="layout">Layout</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="portfolio">Portfolio</option>
+                        </select>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Container where JS will inject project cards -->
+            <div id="projectsContainer" class="cards-grid">
+                <!-- JS-generated cards -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> DevPath by Josue.</p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+
+</html>
